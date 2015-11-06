@@ -7,6 +7,7 @@ require "neat"
 require "normalize-rails"
 require "sass-rails"
 require "selectize-rails"
+require "sprockets/railtie"
 
 require "administrate/namespace"
 require "administrate/page/form"
