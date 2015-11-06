@@ -16,6 +16,7 @@
 
 ### Upcoming Release
 
+* [#174] [COMPAT] Make several missing dependencies explicit.
 * [#142] [FEATURE] Translation: Brazilian Portuguese
 * [#156] [COMPAT] Include missing `sass-rails` dependency in gemspec
 * [COMPAT] Update repository structure so Bundler can pull the gem from github.
