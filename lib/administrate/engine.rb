@@ -1,5 +1,6 @@
 require "datetime_picker_rails"
 require "inline_svg"
+require "jquery-rails"
 require "kaminari"
 require "momentjs-rails"
 require "neat"
