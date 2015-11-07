@@ -126,6 +126,8 @@ GEM
       railties (>= 3.0.0)
     faker (1.5.0)
       i18n (~> 0.5)
+    faraday (0.9.2)
+      multipart-post (>= 1.2, < 3)
     flutie (2.0.0)
     formulaic (0.3.0)
       activesupport
@@ -139,6 +141,7 @@ GEM
     hashdiff (0.2.2)
     high_voltage (2.4.0)
     highline (1.7.8)
+    httpclient (2.7.0)
     i18n (0.7.0)
     i18n-tasks (0.8.7)
       activesupport (>= 2.3.18)
@@ -174,6 +177,7 @@ GEM
     momentjs-rails (2.10.6)
       railties (>= 3.1)
     multi_json (1.11.2)
+    multipart-post (2.0.0)
     neat (1.7.2)
       bourbon (>= 4.0)
       sass (>= 3.3)
@@ -181,6 +185,11 @@ GEM
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     normalize-rails (3.0.3)
+    percy-capybara (1.0.0)
+      percy-client (>= 1.0.0)
+    percy-client (1.2.0)
+      faraday (>= 0.9)
+      httpclient (>= 2.6)
     pg (0.18.3)
     pry (0.10.3)
       coderay (~> 1.1.0)
@@ -324,6 +333,7 @@ DEPENDENCIES
   jquery-rails (>= 4.0.4)
   launchy
   newrelic_rpm
+  percy-capybara
   pg
   pry-rails
   rack-timeout
