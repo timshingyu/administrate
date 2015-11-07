@@ -24,7 +24,7 @@ describe Administrate::Field::HasOne do
         association = Administrate::Field::HasOne.
           with_options(class_name: "Foo")
         field = association.new(:customers, [], :show)
-        candidates = field.candidate_records
+        candidates = field.candidate_options
 
         expect(Foo).to have_received(:all)
         expect(candidates).to eq([])

@@ -52,7 +52,11 @@ describe "order form" do
 
     def find_option(associated_model, field_id)
       field = find("#order_" + field_id)
-      field.find("option", text: associated_model.to_s)
+
+      field.find(
+        "option",
+        text: LineItemDashboard.new.display_resource(associated_model),
+      )
     end
   end
 

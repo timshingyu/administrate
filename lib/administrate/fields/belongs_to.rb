@@ -11,11 +11,29 @@ module Administrate
         self.class.permitted_attribute(attribute)
       end
 
-      def candidate_records
-        Object.const_get(associated_class_name).all
+      def candidate_options
+        candidate_resources.map do |resource|
+          [display_candidate_resource(resource), resource.id]
+        end
+      end
+
+      def associated_resource
+        associated_dashboard.display_resource(data)
       end
 
       private
+
+      def candidate_resources
+        Object.const_get(associated_class_name).all
+      end
+
+      def display_candidate_resource(resource)
+        associated_dashboard.display_resource(resource)
+      end
+
+      def associated_dashboard
+        Object.const_get("#{associated_class_name}Dashboard").new
+      end
 
       def associated_class_name
         options.fetch(:class_name, attribute.to_s.camelcase)

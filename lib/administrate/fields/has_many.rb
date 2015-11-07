@@ -18,8 +18,10 @@ module Administrate
         permitted_attribute.keys.first
       end
 
-      def candidate_records
-        Object.const_get(associated_class_name).all
+      def candidate_options
+        candidate_resources.map do |resource|
+          [display_candidate_resource(resource), resource.id]
+        end
       end
 
       def limit
@@ -39,6 +41,14 @@ module Administrate
       end
 
       private
+
+      def candidate_resources
+        Object.const_get(associated_class_name).all
+      end
+
+      def display_candidate_resource(resource)
+        associated_dashboard.display_resource(resource)
+      end
 
       def associated_dashboard
         Object.const_get("#{associated_class_name}Dashboard").new
