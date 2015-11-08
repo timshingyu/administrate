@@ -55,7 +55,7 @@ describe "order form" do
 
       field.find(
         "option",
-        text: LineItemDashboard.new.display_resource(associated_model),
+        text: displayed(associated_model),
       )
     end
   end
