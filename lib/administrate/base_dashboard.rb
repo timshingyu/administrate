@@ -37,7 +37,7 @@ module Administrate
     end
 
     def display_resource(resource)
-      "#{resource.class.to_s} ##{resource.id}"
+      "#{resource.class} ##{resource.id}"
     end
   end
 end
