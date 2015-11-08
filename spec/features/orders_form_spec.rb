@@ -52,11 +52,7 @@ describe "order form" do
 
     def find_option(associated_model, field_id)
       field = find("#order_" + field_id)
-
-      field.find(
-        "option",
-        text: displayed(associated_model),
-      )
+      field.find("option", text: displayed(associated_model))
     end
   end
 
