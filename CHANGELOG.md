@@ -16,6 +16,11 @@
 
 ### Upcoming Release
 
+* [#191] [FEATURE] Improve API for specifying how resources are displayed
+  across the dashboard.
+  * Models are now displayed with a sensible default - (e.g. "User #2")
+  * Users can define `ModelDashboard#display_resource(resource)` for custom
+    display behavior
 * [#142] [FEATURE] Translation: Brazilian Portuguese
 * [#171] [FEATURE] Translation: Polish
 * [#153] [FEATURE] Translation: Russian
