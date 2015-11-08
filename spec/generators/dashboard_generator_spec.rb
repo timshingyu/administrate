@@ -69,7 +69,8 @@ describe Administrate::Generators::DashboardGenerator, :generator do
           load file("app/dashboards/foo_dashboard.rb")
           attrs = FooDashboard::ATTRIBUTE_TYPES
 
-          expect(attrs[:ip_address]).to eq(Administrate::Field::String.with_options(searchable: false))
+          expect(attrs[:ip_address]).
+            to eq(Administrate::Field::String.with_options(searchable: false))
         ensure
           remove_constants :Foo, :FooDashboard
         end
